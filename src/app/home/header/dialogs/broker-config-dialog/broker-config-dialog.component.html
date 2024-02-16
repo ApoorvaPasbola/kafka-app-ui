@@ -1,0 +1,15 @@
+  <form [formGroup]="config"  class="flex flex-column gap-4">
+    <div class="flex flex-column gap-2">
+      <label for="configName">Config Name</label>
+      <input id="configName" class="p-inputtext-lg w-full" type="text" pInputText formControlName="configName"/>
+    </div>
+    <div class="flex flex-column gap-2">
+      <label for="brokers">Brokers</label>
+      <input id="brokers" class="p-inputtext-lg w-full" type="text" pInputText formControlName="brokers"/>
+    </div>
+    <div class="flex flex-row gap-4 align-items-center">
+      <label for="ssl">SSL</label>
+      <p-inputSwitch id="ssl" formControlName="ssl"></p-inputSwitch>
+    </div>
+    <p-button (onClick)="saveConfig()" label="Submit"  severity="success" class="m-auto mt-4"></p-button>
+  </form>

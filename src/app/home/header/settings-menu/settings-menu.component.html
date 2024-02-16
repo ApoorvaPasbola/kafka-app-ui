@@ -1,0 +1,6 @@
+<div class="settings-menu">
+  <p-button severity="secondary  " size="small" [rounded]="true" [text]="true" icon="pi pi-cog" (click)="showDialog()"></p-button>
+  <p-dialog header="Broker Config" [(visible)]="headerService.openSettings" [modal]="true" [style]="{ 'min-width': '35vw','min-height':'50dvh' }" [draggable]="false" [resizable]="false">
+    <app-broker-config-dialog></app-broker-config-dialog>
+  </p-dialog>
+</div>

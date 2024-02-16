@@ -1,0 +1,11 @@
+<form [formGroup]="topicConfig"  class="flex flex-column gap-4 align-items-center">
+  <div class="flex flex-column gap-2 w-full">
+    <label for="topicName">Topic Name</label>
+    <input id="topicName" class="p-inputtext-sm" type="text" pInputText formControlName="topicName"/>
+  </div>
+  <div class="flex flex-column gap-2 w-full">
+    <label for="partitions">Partitions</label>
+    <p-inputNumber id="partitions" inputId="integeronly" formControlName="partition"></p-inputNumber>
+  </div>
+  <p-button (onClick)="createTopic()" label="Create"  severity="success" class="m-auto mt-4"></p-button>
+</form>

@@ -1,0 +1,85 @@
+// Themes import
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex";
+
+
+:root {
+  --header-padding: .25em;
+  --mat-header-height: 45px;
+  --mat-sub-header-height: 30px;
+  --small-font-size: 14px;
+  --medium-font-size: 16px;
+  --mat-footer-height: 40px;
+  --container-margin:9px;
+  --header-items-height:14px;
+  .p-button-label{
+    text-align: start;
+  }
+  .p-divider.p-divider-horizontal{
+    margin: .25rem;
+  }
+
+}
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 7px;
+  background-color: var(--surface-300);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: var(--gray-100);
+  border: 1px solid var(--blue-100);
+}
+
+.card {
+  background: var(--surface-card);
+  padding: .25rem;
+  border-radius: 10px;
+}
+
+.toolbar-item button {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+
+
+html, body {
+  height: 100%;
+  font-size:14px;
+  font-family: var(--font-family);
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Roboto, "Helvetica Neue", sans-serif !important;
+  overflow: hidden;
+}
+
+mat-button-toggle button {
+  text-align: left;
+  height: 35px;
+}
+
+mat-button-toggle button span {
+  height: 35px;
+  margin: -23px 0;
+}
+
+.ag-header-cell-text {
+  font-size: 13px;
+}
+
+.ag-paging-panel {
+  height: 36px;
+}

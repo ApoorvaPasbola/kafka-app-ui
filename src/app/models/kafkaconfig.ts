@@ -1,0 +1,18 @@
+export enum Deserializer {
+  STRING_DESERIALIZER="STRING_DESERIALIZER",
+  INTEGER_DESERIALIZER="INTEGER_DESERIALIZER",
+  PROTO_DESERIALIZER="PROTO_DESERIALIZER",
+}
+
+export enum Serializer {
+  STRING_SERIALIZER="STRING_SERIALIZER",
+  INTEGER_SERIALIZER="INTEGER_SERIALIZER",
+  PROTO_SERIALIZER="PROTO_SERIALIZER",
+}
+
+export interface KafkaConfig {
+  id:number,
+  configName:string,
+  brokers:string,
+  ssl:boolean
+}
