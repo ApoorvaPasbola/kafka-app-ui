@@ -1,7 +1,7 @@
-<div class="home-container">
-<app-header></app-header>
+<div style="height: 100%;">
+<app-header ></app-header>
   <!--Splitter-->
-  <p-splitter [minSizes]="[20,50]" [panelSizes]="[20, 70]" [style]="{ height: '87dvh', margin:'6px 4px 0px 4px'}">
+  <p-splitter [minSizes]="[20,50]" [panelSizes]="[20, 70]" [style]="{ 'height': '88%', margin:'6px 4px 0px 4px'}">
     <!--  Panel 1 - Navigation  -->
     <ng-template pTemplate >
         <app-nav-bar class="nav-bar-styling pt-2 pr-2" id="navBar" (topicChangeEvent)="triggerDataTableUpdate($event)">
@@ -17,6 +17,6 @@
   </p-splitter>
 
   <!--  Footer  -->
-  <app-footer></app-footer>
+  <app-footer ></app-footer>
 </div>
 
