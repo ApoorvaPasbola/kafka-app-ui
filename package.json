@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve ",
+    "prebuild:dev":"rimraf ..\\kafka-app\\src\\public",
     "build:dev": "ng build",
+    "postbuild:dev": "xcopy .\\dist\\ ..\\kafka-app\\src\\public \/s \/e \/i ",
     "watch": "ng build --watch --configuration production --optimization=true",
     "test": "ng test",
     "json:server": "json-server --port 8090 --routes ./setup/routes.json --watch ./setup/data/messages.json"

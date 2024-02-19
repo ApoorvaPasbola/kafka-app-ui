@@ -2,7 +2,7 @@
   <p-toast position="top-right"></p-toast>
   <div>
     <p><img ngSrc="assets/dog-face.gif" alt="Product Logo" height="640" width="640"/></p>
-    <p-button [style]="{'height':'24px'}" class="mt-2" (onClick)="reload()" label="Kafka Tool" [raised]="false" [text]="true" [plain]="true"></p-button>
+    <p-button  [style]="{'height':'24px','-webkit-app-region': 'no-drag'}" class="mt-2" (onClick)="reload()" label="Kafka Tool" [raised]="false" [text]="true" [plain]="true"></p-button>
     <div class="window-controls">
       <app-settings-menu class="p-toolbar-group-end"></app-settings-menu>
       <i class="pi pi-minus" style="color: cornflowerblue" (click)="handleMinimize()"></i>
