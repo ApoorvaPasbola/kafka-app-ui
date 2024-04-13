@@ -1,7 +1,8 @@
 # KafkaUtilityUi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
-![image](https://github.com/ApoorvaPasbola/kafka-app-ui/assets/45728449/b53bbc24-dbfd-42e5-adb9-2af9fd0d1577)
+![image](https://github.com/ApoorvaPasbola/kafka-app-ui/assets/45728449/7ffebc57-e223-43fb-a2c1-b772d3750ba2)
+
 
 
 ## Setup 
