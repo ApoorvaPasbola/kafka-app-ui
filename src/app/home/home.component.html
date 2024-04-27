@@ -1,22 +1,27 @@
-<div style="height: 100%;">
-<app-header ></app-header>
+<div>
+  <div class="relative top-0 w-full">
+    <app-header ></app-header>
+  </div>
   <!--Splitter-->
-  <p-splitter [minSizes]="[20,50]" [panelSizes]="[20, 70]" [style]="{ 'height': '88%', margin:'6px 4px 0px 4px'}">
-    <!--  Panel 1 - Navigation  -->
-    <ng-template pTemplate >
+  <div class="absolute w-full">
+    <p-splitter [minSizes]="[20,50]" [panelSizes]="[20, 70]" [style]="{ 'height': '88%', margin:'6px 4px 0px 4px'}">
+      <!--  Panel 1 - Navigation  -->
+      <ng-template pTemplate >
         <app-nav-bar class="nav-bar-styling pt-2 pr-2" id="navBar" (topicChangeEvent)="triggerDataTableUpdate($event)">
         </app-nav-bar>
-    </ng-template>
-    <!--  Panel 2 - Content   -->
-    <ng-template pTemplate>
-      <div class="col flex justify-content-center flex-grow-1 pt-2">
-        <app-message-grid class="grid-width" ></app-message-grid>
-      </div>
-    </ng-template>
-
-  </p-splitter>
+      </ng-template>
+      <!--  Panel 2 - Content   -->
+      <ng-template pTemplate>
+        <div class="col flex justify-content-center flex-grow-1 pt-2">
+          <app-message-grid class="grid-width" ></app-message-grid>
+        </div>
+      </ng-template>
+    </p-splitter>
+  </div>
 
   <!--  Footer  -->
-  <app-footer ></app-footer>
+  <div class="absolute bottom-0 w-full">
+    <app-footer ></app-footer>
+  </div>
 </div>
 
