@@ -4,6 +4,7 @@ import {environment} from "../../environments/environment";
 import { Observable, Subject} from "rxjs";
 import {IMessages} from "../models/messages";
 import {TreeNode} from "primeng/api";
+import { Topic } from '../models/Topics';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,8 +21,8 @@ export class HomeService {
    return this.http.get(this._message_url  + topic + "?batch="+batch) as Observable<IMessages[]>;
   }
 
-  getTopics(): Observable<string[]> {
-    return this.http.get(this._base_url + "topics" ) as Observable<string[]>;
+  getTopics(): Observable<Topic[]> {
+    return this.http.get(this._base_url + "topic" ) as Observable<Topic[]>;
   }
 
   createTopic(topicConfig: {topicName:string,partition:number}){

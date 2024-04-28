@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, EventEmitter, Output} from '@angular/core';
 import {HomeService} from "../home.service";
 import {ConfirmationService, MessageService, TreeNode} from "primeng/api";
+import { Topic } from 'src/app/models/Topics';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,7 +10,7 @@ import {ConfirmationService, MessageService, TreeNode} from "primeng/api";
 })
 export class NavBarComponent implements AfterViewInit {
 
-  topics: string[] = []
+  topics: Topic[] = []
   selectedTopic!: TreeNode;
 
   contextMenu = [
@@ -29,16 +30,16 @@ export class NavBarComponent implements AfterViewInit {
   constructor(public _homeService: HomeService, private messageService: MessageService,private confirmationService:ConfirmationService) {
   }
 
-
   @Output() topicChangeEvent = new EventEmitter<string>();
+
   ngAfterViewInit(): void {
     this._homeService.getTopics().subscribe((data)=>{
       this.topics = data
-      let topicNode: TreeNode[] = this.topics.map((value,index) => {
+      let topicNode: TreeNode[] = this.topics.map((value:Topic,index) => {
         return {
           key:`0-${index}`,
-          label: value,
-          data: value,
+          label: value.name,
+          data: value.name,
           icon: 'pi pi-fw pi-file',
           leaf:true
         }
