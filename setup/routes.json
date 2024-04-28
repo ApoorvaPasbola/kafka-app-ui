@@ -1,11 +1,11 @@
 {
-  "/api/consumes/SCOOT_LINK_1?batch=500" : "/messages?_start=0&_limit=10",
-  "/api/consumes/SCOOT_LINK_1?batch=5" : "/messages?_start=0&_limit=5",
-  "/api/consumes/SCOOT_LINK_1?batch=1" : "/messages?_start=0&_limit=1",
-  "/api/consumes/SCOOT_LINK_1?batch=0" : "/messages?_start=0&_limit=0",
-  "/api/consumes/rto-data-aggregator-scootdetector300-data-store-changelog?batch=500" : "/messages?_start=0&_limit=5",
-  "/api/consumes/UTC_CONFIG_DATA?batch=500" : "/messages?_start=0&_limit=1",
-  "/api/consumes/UTC_CONFIG_DATA?batch=0" : "/messages?_start=0&_limit=0",
+  "/api/consumes/Test_Topic_1?batch=50" : "/messages?_start=0&_limit=10",
+  "/api/consumes/Test_Topic_1?batch=5" : "/messages?_start=0&_limit=5",
+  "/api/consumes/Test_Topic_1?batch=1" : "/messages?_start=0&_limit=1",
+  "/api/consumes/Test_Topic_1?batch=0" : "/messages?_start=0&_limit=0",
+  "/api/consumes/Test_Topic_1?batch=500" : "/messages?_start=0&_limit=5",
+  "/api/consumes/Test_Topic_2?batch=500" : "/messages?_start=0&_limit=1",
+  "/api/consumes/Test_Topic_2?batch=0" : "/messages?_start=0&_limit=0",
   "/api/consumes/EMPTY_TOPIC?batch=500" : "/messages?_start=0&_limit=0",
   "/api/consumes/topics": "/topics"
 }
