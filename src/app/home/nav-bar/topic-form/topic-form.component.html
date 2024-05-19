@@ -1,11 +1,15 @@
 <form [formGroup]="topicConfig"  class="flex flex-column gap-4 align-items-center">
-  <div class="flex flex-column gap-2 w-full">
+  <div class="flex flex-column gap-2 ">
     <label for="topicName">Topic Name</label>
-    <input id="topicName" class="p-inputtext-sm" type="text" pInputText formControlName="topicName"/>
+    <input id="topicName" class="p-inputtext-sm" type="text" pInputText formControlName="name"/>
   </div>
-  <div class="flex flex-column gap-2 w-full">
+  <div class="flex flex-column gap-2 ">
     <label for="partitions">Partitions</label>
-    <p-inputNumber id="partitions" inputId="integeronly" formControlName="partition"></p-inputNumber>
+    <p-inputNumber id="partitions" inputId="integeronly" formControlName="partitionNumber"></p-inputNumber>
+  </div>
+  <div class="flex flex-column gap-2 ">
+    <label for="replicationFactor">Replication Factor</label>
+    <p-inputNumber id="replicationFactor" inputId="integeronly" formControlName="replicationFactor"></p-inputNumber>
   </div>
   <p-button (onClick)="createTopic()" label="Create"  severity="success" class="m-auto mt-4"></p-button>
 </form>
