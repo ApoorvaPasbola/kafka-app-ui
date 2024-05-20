@@ -34,7 +34,7 @@ export class MessageGridComponent {
           this.loading = false;
         }
         this.rowData = data.map(value => {
-                   return {...value,message: JSON.stringify(JSON.parse(JSON.stringify(value.message)),null,2), time: new Date(+value.time).toString()}
+                   return {...value,message: JSON.stringify(JSON.parse(JSON.stringify(value.message)),null,2), time: new Date(value.timestamp).toString()}
         })
         this.loading = false;
       },

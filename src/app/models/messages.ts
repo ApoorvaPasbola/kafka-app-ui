@@ -1,6 +1,10 @@
 export interface IMessages{
-    time : string,
+    timestamp : string,
     key : string,
     message : string,
-    partition: number
+    partition: number,
+    offset:number,
+    headersFormatted: string,
+    headers: any
+
 }
