@@ -1,37 +1,42 @@
-<div >
+<div mr-3 mt-0 mb-0 w-full>
   <p-table
     [loading]="loading"
     #dt2
     [scrollable]="true"
     [value]="rowData"
     styleClass="p-datatable-striped"
-    class="table-style "
+    class="table-style"
     scrollHeight="71dvh"
     [globalFilterFields]="['key', 'message', 'time']"
     [tableStyle]="{'max-width':'100%',}"
   >
     <ng-template pTemplate="caption">
-      <div class="flex align-items-center justify-content-center h-1rem" >
-          <div>
-            Topic Data
-          </div>
-            <span class="p-input-icon-left ml-auto mr-1 ">
-                <i class="pi pi-search"></i>
-                <input pInputText class="h-2rem" size="20" type="text" (input)="dt2.filterGlobal($event.target.value, 'contains')" placeholder="Filter" />
-            </span>
+      <div class="flex align-items-center justify-content-center h-1rem">
+        <div>Topic Data</div>
+        <span class="p-input-icon-left ml-auto mr-1">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            class="h-2rem"
+            size="20"
+            type="text"
+            (input)="dt2.filterGlobal($event.target.value, 'contains')"
+            placeholder="Filter"
+          />
+        </span>
       </div>
     </ng-template>
-    <ng-template pTemplate="header" >
+    <ng-template pTemplate="header">
       <tr>
         <th>Timestamp</th>
-        <th >Messages</th>
+        <th>Messages</th>
         <th>Key</th>
       </tr>
     </ng-template>
     <ng-template let-row pTemplate="body">
       <tr>
-        <td>{{ row.time | date:"dd-MM-yyyy_hh:mm:ss" }}</td>
-        <td >{{ row.message }}</td>
+        <td>{{ row.time | date : "dd-MM-yyyy_hh:mm:ss" }}</td>
+        <td>{{ row.message }}</td>
         <td>{{ row.key }}</td>
       </tr>
     </ng-template>
@@ -40,11 +45,21 @@
         <td colspan="7">No Messages in Topic.</td>
       </tr>
     </ng-template>
-    <ng-template pTemplate="summary" >
+    <ng-template pTemplate="summary">
       <div class="flex align-items-center justify-content-center h-1rem">
-        <p-inputNumber size="3" [formControl]="currentBatchSize" class="ml-auto h-2rem"></p-inputNumber>
-        <p-button (click)="triggerRefresh()" class="ml-1" icon="pi pi-refresh" styleClass="p-button-text" type="button"></p-button>
+        <p-inputNumber
+          size="3"
+          [formControl]="currentBatchSize"
+          class="ml-auto h-2rem"
+        ></p-inputNumber>
+        <p-button
+          (click)="triggerRefresh()"
+          class="ml-1"
+          icon="pi pi-refresh"
+          styleClass="p-button-text"
+          type="button"
+        ></p-button>
       </div>
-       </ng-template>
+    </ng-template>
   </p-table>
 </div>
